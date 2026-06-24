@@ -1,0 +1,80 @@
+/* ==========================
+   MEMORY GRID
+========================== */
+
+.memory-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:25px;
+}
+
+/* ==========================
+   MEMORY CARD (MAIN FEATURE)
+========================== */
+
+.memory-card{
+    background: rgba(15, 23, 42, 0.85);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:16px;
+    overflow:hidden;
+    transition:0.4s ease;
+    position:relative;
+}
+
+.memory-card:hover{
+    transform: translateY(-10px);
+    border-color: rgba(0,229,255,0.3);
+    box-shadow: 0 15px 40px rgba(0,229,255,0.1);
+}
+
+/* image styling */
+.memory-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.memory-card:hover img{
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* text section */
+.memory-text{
+    padding:20px;
+}
+
+.memory-text h3{
+    font-family:'Orbitron', sans-serif;
+    margin-bottom:10px;
+    color: var(--primary);
+}
+
+.memory-text p{
+    color: var(--muted);
+    font-size:0.9rem;
+    line-height:1.4;
+}
+
+/* soft glow overlay */
+.memory-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: radial-gradient(circle at top, rgba(0,229,255,0.1), transparent 60%);
+    opacity:0;
+    transition:0.5s;
+}
+
+.memory-card:hover::after{
+    opacity:1;
+}
+
+/* ==========================
+   HERO TWEAK
+========================== */
+
+.skills-hero h1{
+    letter-spacing:2px;
+}

@@ -1,0 +1,177 @@
+/* ==========================
+   CONTACT LAYOUT FIX
+========================== */
+
+body{
+    background:#050816;
+    font-family:'Poppins', sans-serif;
+}
+
+/* HERO (reuse existing system) */
+.skills-hero{
+    text-align:center;
+    padding:140px 8% 60px;
+}
+
+.skills-hero h1{
+    font-family:'Orbitron', sans-serif;
+    color:#00e5ff;
+    font-size:3rem;
+    letter-spacing:2px;
+}
+
+.skills-hero p{
+    color:#94a3b8;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+    padding:0 8% 100px;
+}
+
+@media(max-width:900px){
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.contact-card{
+    background:#0f172a;
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:16px;
+    padding:25px;
+    transition:0.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-8px);
+    border-color:#00e5ff;
+}
+
+/* headings */
+.contact-card h2{
+    font-family:'Orbitron', sans-serif;
+    color:#00e5ff;
+    margin-bottom:15px;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap: 18px;;
+    color: #00e5ff;
+}
+
+input, textarea{
+    padding:12px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.08);
+    background:#020617;
+    color:white;
+    outline:none;
+}
+
+input:focus, textarea:focus{
+    border-color:#00e5ff;
+}
+
+/* BUTTON */
+button{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#00e5ff;
+    color:#050816;
+    font-weight:600;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#7c3aed;
+    color:white;
+}
+
+/* ==========================
+   INFO TEXT
+========================== */
+
+.contact-card p{
+    color:#94a3b8;
+    margin:10px 0;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.contact-card i{
+    color:#00e5ff;
+}
+
+/* ==========================
+   SOCIALS
+========================== */
+
+.socials{
+    margin-top:15px;
+    display:flex;
+    gap:12px;
+}
+
+.socials a{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.08);
+    color:#00e5ff;
+    text-decoration:none;
+}
+
+.socials a:hover{
+    background:#00e5ff;
+    color:#050816;
+}
+
+/* ==========================
+   STATUS
+========================== */
+
+.status{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    display:inline-block;
+    background:#94a3b8;
+}
+
+.status.online{
+    background:#22c55e;
+}
+
+/* ==========================
+   QUOTE
+========================== */
+
+.quote{
+    margin-top:15px;
+    padding:12px;
+    border-left:3px solid #00e5ff;
+    color:#94a3b8;
+    font-style:italic;
+}

@@ -1,0 +1,326 @@
+/* ==========================
+   GLOBAL RESET + BASE
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(180deg, #050816, #020617);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   ROOT COLORS
+========================== */
+
+:root{
+    --bg:#050816;
+    --card:#0f172a;
+    --primary:#00e5ff;
+    --secondary:#7c3aed;
+    --muted:#94a3b8;
+}
+
+/* ==========================
+   HEADER (CLEAN + MODERN FIX)
+========================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+nav{
+    display:flex;
+    gap:22px;
+}
+
+nav a{
+    color:#cbd5e1;
+    font-size:0.95rem;
+    transition:0.3s;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:var(--primary);
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.nav-btn{
+    padding:10px 18px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color:black;
+    border-radius:25px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    transform: scale(1.05);
+}
+
+/* ==========================
+   PAGE SECTIONS
+========================== */
+
+section{
+    padding:100px 8%;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.skills-hero{
+    text-align:center;
+    padding:140px 8% 60px;
+}
+
+.skills-hero h1{
+    font-family:'Orbitron', sans-serif;
+    font-size:3rem;
+    color:var(--primary);
+    letter-spacing:2px;
+}
+
+.skills-hero p{
+    color:var(--muted);
+    margin-top:10px;
+}
+
+/* ==========================
+   PROJECT GRID (IMPORTANT FIX)
+========================== */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:25px;
+}
+
+/* ==========================
+   PROJECT CARDS (FULL DESIGN)
+========================== */
+
+.skill-card{
+    background: rgba(15, 23, 42, 0.85);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:16px;
+    padding:25px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    transition:0.4s ease;
+}
+
+/* soft glow layer */
+.skill-card::before{
+    content:"";
+    position:absolute;
+    inset:-50%;
+    background: radial-gradient(circle, rgba(0,229,255,0.15), transparent 60%);
+    opacity:0;
+    transition:0.5s;
+}
+
+.skill-card:hover{
+    transform: translateY(-12px);
+    border-color: rgba(0,229,255,0.4);
+    box-shadow: 0 15px 40px rgba(0,229,255,0.08);
+}
+
+.skill-card:hover::before{
+    opacity:1;
+}
+
+.skill-card i{
+    font-size:2rem;
+    color:var(--primary);
+    margin-bottom:10px;
+    transition:0.3s;
+}
+
+.skill-card:hover i{
+    transform: scale(1.2) rotate(5deg);
+    color: var(--secondary);
+}
+
+.skill-card h3{
+    font-family:'Orbitron', sans-serif;
+    font-size:1.1rem;
+    margin-top:10px;
+}
+
+.skill-card p{
+    color:var(--muted);
+    font-size:0.85rem;
+    margin-top:10px;
+    line-height:1.4;
+}
+
+/* ==========================
+   BARS
+========================== */
+
+.bar{
+    width:100%;
+    height:10px;
+    background:#1e293b;
+    border-radius:20px;
+    margin:15px 0;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    border-radius:20px;
+    transition:1s ease;
+}
+
+.skill-card:hover .fill{
+    filter: brightness(1.3);
+}
+
+/* same fills you already had */
+.html{width:95%; background:linear-gradient(90deg,#ff6b00,#00e5ff);}
+.css{width:90%; background:linear-gradient(90deg,#00e5ff,#3b82f6);}
+.js{width:75%; background:linear-gradient(90deg,#facc15,#f97316);}
+.git{width:70%; background:linear-gradient(90deg,#ef4444,#7c3aed);}
+.responsive{width:85%; background:linear-gradient(90deg,#22c55e,#00e5ff);}
+.uiux{width:80%; background:linear-gradient(90deg,#a855f7,#00e5ff);}
+
+/* ==========================
+   LEARNING SECTION
+========================== */
+
+.learning{
+    text-align:center;
+}
+
+.learning-box{
+    max-width:750px;
+    margin:auto;
+    background: rgba(15, 23, 42, 0.8);
+    border:1px solid rgba(0,229,255,0.15);
+    padding:40px;
+    border-radius:16px;
+    transition:0.4s;
+}
+
+.learning-box:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(0,229,255,0.08);
+}
+
+.skill-progress{
+    width:100%;
+    height:14px;
+    background:#1e293b;
+    border-radius:20px;
+    margin:20px 0;
+    overflow:hidden;
+}
+
+.skill-progress-bar{
+    width:65%;
+    height:100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow{
+    from{ box-shadow:0 0 10px rgba(0,229,255,0.3);}
+    to{ box-shadow:0 0 25px rgba(124,58,237,0.4);}
+}
+
+/* ==========================
+   FOOTER (FULL FIX)
+========================== */
+
+footer{
+    text-align:center;
+    padding:60px 20px;
+    background:#020617;
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+footer h3{
+    color:var(--primary);
+    margin-bottom:10px;
+    font-family:'Orbitron', sans-serif;
+}
+
+footer p{
+    color:var(--muted);
+    margin-bottom:10px;
+}
+
+footer a{
+    color:var(--primary);
+    transition:0.3s;
+}
+
+footer a:hover{
+    color:var(--secondary);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+    nav{
+        display:none;
+    }
+
+    .skills-hero h1{
+        font-size:2.3rem;
+    }
+}

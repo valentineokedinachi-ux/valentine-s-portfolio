@@ -1,0 +1,281 @@
+/* ==========================
+   RESET + BASE
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050816;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ==========================
+   VARIABLES
+========================== */
+
+:root{
+    --bg:#050816;
+    --card:#0f172a;
+    --primary:#00e5ff;
+    --secondary:#7c3aed;
+    --muted:#94a3b8;
+}
+
+/* ==========================
+   GLOBAL LAYOUT
+========================== */
+
+section{
+    padding:100px 8%;
+}
+
+h1,h2,h3{
+    font-family:'Orbitron',sans-serif;
+}
+
+/* ==========================
+   HEADER (GLOBAL FIX)
+========================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    background:rgba(5,8,22,.9);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.05);
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:700;
+}
+
+.logo span{
+    color:var(--primary);
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+.nav-btn{
+    padding:10px 18px;
+    background:var(--primary);
+    color:black;
+    border-radius:20px;
+    font-weight:600;
+}
+
+/* ==========================
+   FOOTER (GLOBAL FIX)
+========================== */
+
+footer{
+    text-align:center;
+    padding:60px 20px;
+    background:#020617;
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+footer h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+footer p{
+    color:var(--muted);
+    margin-bottom:10px;
+}
+
+footer a{
+    color:var(--primary);
+}
+
+/* ==========================
+   HERO (HOME SAFE)
+========================== */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    padding-top:120px;
+}
+
+.hero-text h1{
+    font-size:3.5rem;
+}
+
+.hero-text span{
+    color:var(--primary);
+}
+
+.hero-description{
+    color:var(--muted);
+    max-width:600px;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.hero-buttons{
+    margin-top:25px;
+    display:flex;
+    gap:15px;
+}
+
+.hero-buttons a{
+    padding:12px 20px;
+    border-radius:20px;
+}
+
+.hero-buttons a:first-child{
+    background:var(--primary);
+    color:black;
+}
+
+.hero-buttons a:last-child{
+    border:1px solid var(--primary);
+    color:var(--primary);
+}
+
+/* ==========================
+   SKILLS PAGE (FIXED)
+========================== */
+
+.skills-hero{
+    text-align:center;
+    padding:140px 8% 60px;
+}
+
+.skills-hero h1{
+    color:var(--primary);
+    font-size:3rem;
+}
+
+.skills-hero p{
+    color:var(--muted);
+    margin-top:10px;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:var(--card);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.skill-card i{
+    font-size:2rem;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+/* BARS */
+
+.bar{
+    width:100%;
+    height:10px;
+    background:#1e293b;
+    border-radius:20px;
+    margin:15px 0;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    border-radius:20px;
+}
+
+.html{width:95%; background:linear-gradient(90deg,#ff6b00,#00e5ff);}
+.css{width:90%; background:linear-gradient(90deg,#00e5ff,#3b82f6);}
+.js{width:75%; background:linear-gradient(90deg,#facc15,#f97316);}
+.git{width:70%; background:linear-gradient(90deg,#ef4444,#7c3aed);}
+.responsive{width:85%; background:linear-gradient(90deg,#22c55e,#00e5ff);}
+.uiux{width:80%; background:linear-gradient(90deg,#a855f7,#00e5ff);}
+
+/* LEARNING */
+
+.learning-box{
+    max-width:700px;
+    margin:auto;
+    background:var(--card);
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.skill-progress{
+    width:100%;
+    height:15px;
+    background:#1e293b;
+    border-radius:20px;
+    margin:20px 0;
+    overflow:hidden;
+}
+
+.skill-progress-bar{
+    width:65%;
+    height:100%;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+}
+
+/* ==========================
+   RESPONSIVE FIX
+========================== */
+
+@media(max-width:900px){
+    nav{
+        display:none;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:2.5rem;
+    }
+}
+
+
+
