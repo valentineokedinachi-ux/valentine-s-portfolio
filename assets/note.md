@@ -30,11 +30,15 @@ Balanced visual hierarchy between headings and descriptive text.
 
 
 
-I used repeated prompts for the other pages since I made it suit my persona.
+I used repeated prompts for the other pages  (Using the same prompt used in the about page for other sections such as projects, and skills)since I made it suit my persona.
 
 OVERALL ENGINEERING I DID
+- I linked other pages to the about page to maintain uniformity in the global styles
 - I linked all navigations to be correct including the social media links
 - I added images when neccesary
 - I changed writeups in different pages to suit me
 - Finally, I corrected navigations.
--I added sections to some pages myself.
+- I added sections to some pages myself.
+- I added quotes to each section
+- I added green color and small typographic effects to the quotes
+- I made sure to design the page as neatly as possible
