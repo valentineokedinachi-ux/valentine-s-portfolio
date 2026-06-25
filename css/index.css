@@ -228,6 +228,13 @@ nav a:hover{
     transform:translateY(-5px);
 }
 
+.profile-image img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 
 /* ==========================
    MOBILE NAV SECTION (NO JS)
@@ -534,11 +541,56 @@ section h2{
     gap:25px;
 }
 
-.memory-card{
+.memory-card:nth-child(1){
     height:260px;
     border-radius:20px;
     background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.8)),
-    url("https://picsum.photos/400");
+    url("../images/grad.png");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:end;
+    justify-content:center;
+    padding-bottom:20px;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.memory-card:nth-child(2){
+    height:260px;
+    border-radius:20px;
+    background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.8)),
+    url("../images/cultural.png");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:end;
+    justify-content:center;
+    padding-bottom:20px;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.memory-card:nth-child(3){
+    height:260px;
+    border-radius:20px;
+    background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.8)),
+    url("../images/adventure.png");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:end;
+    justify-content:center;
+    padding-bottom:20px;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.memory-card:nth-child(4){
+    height:260px;
+    border-radius:20px;
+    background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.8)),
+    url("../images/school.png");
     background-size:cover;
     background-position:center;
     display:flex;

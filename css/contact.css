@@ -31,13 +31,15 @@ body{
 .contact-container{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
-    gap:25px;
+    gap:30px;
     padding:0 8% 100px;
 }
 
 @media(max-width:900px){
     .contact-container{
         grid-template-columns:1fr;
+        gap: 30px;
+        width: 300px;
     }
 }
 
@@ -72,7 +74,7 @@ body{
 form{
     display:flex;
     flex-direction:column;
-    gap: 18px;;
+    gap: 18px;
     color: #00e5ff;
 }
 
@@ -144,7 +146,7 @@ button:hover{
 }
 
 .socials a:hover{
-    background:#00e5ff;
+    background-color: chocolate;
     color:#050816;
 }
 
